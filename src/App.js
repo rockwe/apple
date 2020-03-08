@@ -1,25 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Routes from './config/routes'
+import { ThemeProvider } from 'styled-components'
+import theme from './config/theme'
+import { compose, createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux'
+import { createLogger } from 'redux-logger'
+import thunk from 'redux-thunk'
+import reducer from './redux/reducers'
+import { getAllProducts } from './redux/actions'
+//import store from './redux/store';
+
+
+const middleware = [thunk];
+
+const store = createStore(
+  reducer,
+  compose(
+    applyMiddleware(...middleware)
+    
+  )
+);
+
+
+  store.dispatch(getAllProducts())
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+       
+       <Routes />
+       
+   </Provider>
+
   );
 }
 

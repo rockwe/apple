@@ -1,0 +1,77 @@
+/**
+ *
+ * You can write your CSS code here, DO NOT touch the default JavaScript file
+ * because it will make it harder for you to update.
+ * 
+ */
+
+/*# sourceMappingURL=custom.css.map */
+
+.widget-preview {
+    width: 100%;
+}
+
+.widget-preview .widget-header {
+    height: 70px;
+    background-color: #3abaf4;
+}
+
+.widget-preview .widget-header .title {
+    color: #fff;
+    display: inline-block;
+    margin-left: 25px;
+    max-width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.widget-preview .widget-content {
+    height: 350px;
+    margin: 0;
+    overflow-y: auto;
+    background-color: #eee;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    padding: 8px 8px 40px;
+}
+
+.widget-preview .widget-content .speech-bubble {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    margin: 0 auto 10px;
+    max-width: 70%;
+    padding: 15px;
+    position: relative;
+    background-color: #dadae8;
+    clear: both;
+    color: #fff;
+}
+
+.widget-preview .widget-content .speech-bubble.right { float: right; background-color: #3abaf4; }
+.widget-preview .widget-content .speech-bubble.left { float: left; }
+.widget-preview .widget-content .speech-bubble::after {
+    border-left: 20px solid transparent;
+    border-top: #efefef;
+    bottom: -20px;
+    content: "";
+    position: absolute;
+    right: 20px;
+}
+
+.widget-preview .widget-footer {
+    height: 50px;
+    background-color: #3abaf4;
+}
+
+
+.nav-back-icon {
+    margin-right: 15px;
+    margin-top: 6px;
+}
